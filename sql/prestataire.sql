@@ -1,0 +1,13 @@
+CREATE TABLE produit(
+    code VARCHAR PRIMARY KEY,
+    nom
+);
+
+CREATE TABLE stock(
+    id SERIAL PRIMARY KEY,
+    date DATE NOT NULL,
+    codeproduit VARCHAR REFERENCES produit,
+    entre DOUBLE PRECISION DEFAULT 0,
+    sortie DOUBLE PRECISION DEFAULT 0,
+    pu DOUBLE PRECISION DEFAULT 0
+);

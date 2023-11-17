@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var produits = ViewBag.Produits as List<Produit>;
+    var services = ViewBag.Services as List<Service>;
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form action="/besoinService" method="get">
+        <input type="text" placeholder="number" name="numero" />
+        <p>Produi</p>
+        <select name="idproduit">
+            @foreach (var product in produits)
+            {
+                <option value="@product.idProduit">@product.nom</option>
+            }
+        </select>
+        <p>Service</p>
+        <select name="idservice">
+            @foreach (var service in services)
+            {
+                <option value="@service.idService">@service.nom</option>
+            }
+        </select>
+        <input type="number" name="qte" placeholder="Quantiter" />
+        <button type="submit">OK</button>
+    </form>
+    
+</div>
