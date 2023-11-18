@@ -9,44 +9,6 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Commercial
 build_property.RootNamespace = Commercial
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\miali\Documents\3eme_annee\S5\Tovo\Commercial\
-build_property.RazorLangVersion = 6.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\miali\Documents\3eme_annee\S5\Tovo\Commercial
-build_property._RazorSourceGeneratorDebug = 
-
-[C:/Users/miali/Documents/3eme_annee/S5/Tovo/Commercial/Views/Besoin/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVzb2luXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/miali/Documents/3eme_annee/S5/Tovo/Commercial/Views/Besoin/ValidationBesoin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVzb2luXFZhbGlkYXRpb25CZXNvaW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/miali/Documents/3eme_annee/S5/Tovo/Commercial/Views/Login/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/miali/Documents/3eme_annee/S5/Tovo/Commercial/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/miali/Documents/3eme_annee/S5/Tovo/Commercial/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/miali/Documents/3eme_annee/S5/Tovo/Commercial/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/miali/Documents/3eme_annee/S5/Tovo/Commercial/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/miali/Documents/3eme_annee/S5/Tovo/Commercial/Views/Shared/_Layout.cshtml]
-=======
 build_property.ProjectDir = D:\ITU\S5\TOVO\Commercial\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
@@ -56,6 +18,10 @@ build_property._RazorSourceGeneratorDebug =
 
 [D:/ITU/S5/TOVO/Commercial/Views/Besoin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVzb2luXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITU/S5/TOVO/Commercial/Views/Besoin/ValidationBesoin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVzb2luXFZhbGlkYXRpb25CZXNvaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/ITU/S5/TOVO/Commercial/Views/Login/Index.cshtml]
@@ -79,6 +45,5 @@ build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/ITU/S5/TOVO/Commercial/Views/Shared/_Layout.cshtml]
->>>>>>> 5977652ee1d86a0f5aab9eb42770a297280aa713
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-o78u9coe2l
