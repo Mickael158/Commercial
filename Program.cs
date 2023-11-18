@@ -1,7 +1,14 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Ajouter les services au conteneur.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(20);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
 
@@ -16,8 +23,11 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+// Ajouter la gestion de session au pipeline
+app.UseSession();
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Besoin}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=Index}/{id?}");
 
 app.Run();

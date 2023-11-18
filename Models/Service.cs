@@ -42,5 +42,30 @@ namespace Commercial.Models
             }
             return services;
         }
+        public Service SearchResponsableServiceByResponsable(int idPersonnne)
+        {
+            ConnexionBDD connexion = new ConnexionBDD();
+            Service service = new Service();
+
+
+            using (NpgsqlConnection connection = connexion.Connect())
+            {
+                string sql = "select * from service WHERE idresponsable="+idPersonnne;
+                using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
+                {
+                    using (NpgsqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            service.idService = Convert.ToInt32(reader["idservice"]);
+                            service.idSociete = Convert.ToInt32(reader["idsociete"]);
+                            service.nom = Convert.ToString(reader["nom"]);
+                            service.idResposable = Convert.ToInt32(reader["idresponsable"]);
+                        }
+                    }
+                }
+            }
+            return service;
+        }
     }
 }

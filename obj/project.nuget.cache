@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7wr0e7iJTVxokYdfYEk4Km+1Esd8zCBFeRhQajhKrkjgAUGvgoF2qnnXN6G8h/E1eYe8Sj291e7xxiRcUqFZNQ==",
+  "dgSpecHash": "lwexgNd4NdssLhjVjQ216qSIvPGKWDcD+6O5Bjh+Uw+fLHaUivLHE8s+7i8BpZdnqF9KTxe9IbTQHiHDFRZTJg==",
   "success": true,
-  "projectFilePath": "D:\\ITU\\S5\\TOVO\\Commercial\\Commercial.csproj",
+  "projectFilePath": "D:\\Tovo\\2\\Commercial\\Commercial\\Commercial.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\elyse\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\elyse\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
-    "C:\\Users\\elyse\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\razaf\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\razaf\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
+    "C:\\Users\\razaf\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
