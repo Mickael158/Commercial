@@ -9,33 +9,33 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Commercial
 build_property.RootNamespace = Commercial
-build_property.ProjectDir = D:\Tovo\2\Commercial\Commercial\
+build_property.ProjectDir = D:\ITU\S5\TOVO\Commercial\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Tovo\2\Commercial\Commercial
+build_property.MSBuildProjectDirectory = D:\ITU\S5\TOVO\Commercial
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Tovo/2/Commercial/Commercial/Views/Besoin/Index.cshtml]
+[D:/ITU/S5/TOVO/Commercial/Views/Besoin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVzb2luXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Tovo/2/Commercial/Commercial/Views/Shared/Error.cshtml]
+[D:/ITU/S5/TOVO/Commercial/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Tovo/2/Commercial/Commercial/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/ITU/S5/TOVO/Commercial/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Tovo/2/Commercial/Commercial/Views/_ViewImports.cshtml]
+[D:/ITU/S5/TOVO/Commercial/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Tovo/2/Commercial/Commercial/Views/_ViewStart.cshtml]
+[D:/ITU/S5/TOVO/Commercial/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Tovo/2/Commercial/Commercial/Views/Shared/_Layout.cshtml]
+[D:/ITU/S5/TOVO/Commercial/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-o78u9coe2l

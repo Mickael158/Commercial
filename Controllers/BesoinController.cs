@@ -28,11 +28,18 @@ namespace Commercial.Controllers
 
             return View("Index");
         }
-        [HttpGet("/besoinService")]
-        public IActionResult InsertBesoinByService(string numero, String idservice, String idproduit, String qte)
+
+
+        [HttpPost("/besoinService")]
+        public IActionResult InsertBesoinByService(string numero, String idservice, String[] produit, String[] qte)
         {
             BesoinService besoinService = new BesoinService();
-            besoinService.getInsererBesoinService(numero , idservice , idproduit , qte);
+            for (int i = 0; i < produit.Length; i++)
+            {
+                string idProduit = produit[i];
+                string quantite = qte[i];
+                besoinService.getInsererBesoinService(numero , idservice , idProduit, quantite);
+            }
             return RedirectToAction("Index");
         }
 

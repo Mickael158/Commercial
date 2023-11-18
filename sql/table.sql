@@ -4,25 +4,24 @@ CREATE TABLE societe(
     localisation VARCHAR
 );
 INSERT INTO societe (nom, localisation) VALUES
-    ('ABC Corporation', 'Paris'),
-    ('XYZ Industries', 'New York'),
-    ('123 Manufacturing', 'Berlin'),
-    ('Tech Innovators', 'San Francisco'),
-    ('Global Solutions', 'London');
+    ('ABC Corporation', 'Paris');
 
 
 CREATE TABLE personnel(
     id SERIAL PRIMARY KEY,
     matricule VARCHAR UNIQUE,
     nom VARCHAR,
-    prenom VARCHAR
+    prenom VARCHAR,
+    pass VARCHAR
 );
-INSERT INTO personnel (matricule, nom, prenom) VALUES
-    ('EMP001', 'Dupont', 'Jean'),
-    ('EMP002', 'Martin', 'Sophie'),
-    ('EMP003', 'Johnson', 'Michael'),
-    ('EMP004', 'Chen', 'Li'),
-    ('EMP005', 'Garcia', 'Maria');
+
+INSERT INTO personnel (matricule, nom, prenom, pass) VALUES
+    ('EMP001', 'Dupont', 'Jean', 'AZERTY'),
+    ('EMP002', 'Martin', 'Sophie', 'AZERTY'),
+    ('EMP003', 'Johnson', 'Michael', 'AZERTY'),
+    ('EMP004', 'Chen', 'Li', 'AZERTY'),
+    ('EMP005', 'Garcia', 'Maria', 'AZERTY'),
+    ('EMP006', 'Tsotra', 'Tprenom', 'AZERTY');
 
 
 CREATE TABLE service(
@@ -33,10 +32,10 @@ CREATE TABLE service(
 );
 INSERT INTO service (idsociete, nom, idresponsable) VALUES
     (1, 'Service A', 1),
-    (2, 'Service B', 2),
-    (3, 'Service C', 3),
-    (4, 'Service D', 4),
-    (5, 'Service E', 5);
+    (1, 'Service B', 2),
+    (1, 'Service C', 3),
+    (1, 'Service D', 4),
+    (1, 'Service E', 5);
 
 CREATE TABLE fournisseur(
     id SERIAL PRIMARY KEY,
@@ -64,15 +63,23 @@ INSERT INTO produit (code, nom) VALUES
 
 CREATE TABLE besoin_service(
     idbesoin_service SERIAL PRIMARY KEY,
-    numero VARCHAR UNIQUE,
+    numero VARCHAR,
     idservice INT4 REFERENCES service,
     idproduit INT4 REFERENCES produit,
-    qte DOUBLE PRECISION
+    qte DOUBLE PRECISION,
+    etat INT
+);
+
+CREATE TABLE validate_besoin(
+    id SERIAL PRIMARY KEY,
+    date DATE NOT NULL,
+    numero_besoin_service VARCHAR,
+    idpersonnel INT REFERENCES personnel
 );
 
 CREATE TABLE reponse_prestataire(
     id SERIAL PRIMARY KEY,
-    numerobesoin_service VARCHAR REFERENCES besoin_service(numero),
+    numerobesoin_service VARCHAR NOT NULL,
     idfournisseur INT4 REFERENCES fournisseur,
     proforma VARCHAR
 );
