@@ -4,27 +4,37 @@
     var services = ViewBag.Services as List<Service>;
 }
 
-
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <form action="/besoinService" method="get">
-        <input type="text" placeholder="number" name="numero" />
-        <p>Produi</p>
-        <select name="idproduit">
-            @foreach (var product in produits)
-            {
-                <option value="@product.idProduit">@product.nom</option>
-            }
-        </select>
-        <p>Service</p>
-        <select name="idservice">
-            @foreach (var service in services)
-            {
-                <option value="@service.idService">@service.nom</option>
-            }
-        </select>
-        <input type="number" name="qte" placeholder="Quantiter" />
-        <button type="submit">OK</button>
-    </form>
-    
+    <div>
+        <form action="/besoinService" method="post" id="monFormulaire">
+            <input type="text" placeholder="numero de command" name="numero" />
+            <select name="idservice">
+                @foreach (var service in services)
+                {
+                    <option value="@service.idService">@service.nom</option>
+                }
+            </select>
+            <button id="add" style="font-size: 20px;" type="button">+</button>
+            <div id="besoin" style="margin-top: 20px;">
+                <select name="produit[]">
+                    @foreach (var product in produits)
+                    {
+                        <option value="@product.idProduit">@product.nom</option>
+                    }
+                </select>
+                <input type="number" name="qte[]" placeholder="Quantiter" />
+            </div>
+
+            <input type="submit" value="Valider">
+        </form>
+    </div>
 </div>
+
+<script>
+    document.getElementById("add").addEventListener("click", function () {
+        var clone = document.getElementById("besoin").cloneNode(true);
+        clone.querySelector("select[name='produit[]']").value = "";
+        clone.querySelector("input[name='qte[]']").value = "";
+        document.getElementById("besoin").insertAdjacentElement("afterend", clone);
+    });
+</script>
