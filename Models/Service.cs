@@ -6,10 +6,8 @@ namespace Commercial.Models
     public class Service
     {
         public int idService { get; set; }
-
         public int idSociete { get; set; }
         public string nom { get; set; }
-
         public int idResposable { get; set; }
 
         public List<Service> AllService()

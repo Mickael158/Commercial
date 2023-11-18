@@ -20,13 +20,14 @@ namespace Commercial.Models
             using (NpgsqlConnection connection = connexion.Connect())
             {
                 string sql = "select * from personnel WHERE matricule='"+matricule+ "' AND pass='"+password+"'";
+                Console.WriteLine(sql);
                 using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
                 {
                     using (NpgsqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            personnel.idPersonnel = Convert.ToInt32(reader["idPersonnel"]);
+                            personnel.idPersonnel = Convert.ToInt32(reader["id"]);
                             personnel.matricule = Convert.ToString(reader["matricule"]);
                             personnel.nom = Convert.ToString(reader["nom"]);
                             personnel.prenom = Convert.ToString(reader["prenom"]);
@@ -41,7 +42,7 @@ namespace Commercial.Models
         {
             bool result = false;
             Personnel personnel = SearchPersonnelByMatriculeAndPassword(matricule , password);
-            if(personnel != null)
+            if(personnel.idPersonnel != 0)
             {
                 result = true;
             }
@@ -52,10 +53,10 @@ namespace Commercial.Models
             bool result = false;
             Personnel personnel = SearchPersonnelByMatriculeAndPassword(matricule, password);
             Service service1 = new Service();
-            if (personnel != null)
+            if (personnel.idPersonnel != 0)
             {
                 Service service = service1.SearchResponsableServiceByResponsable( personnel.idPersonnel);
-                if (service != null)
+                if (service.idResposable != 0)
                 {
                     result = true;
                 }

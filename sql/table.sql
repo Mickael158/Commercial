@@ -1,3 +1,5 @@
+-- nom base = societe
+
 CREATE TABLE societe(
     idsociete SERIAL PRIMARY KEY,
     nom VARCHAR,
@@ -67,7 +69,7 @@ CREATE TABLE besoin_service(
     idservice INT4 REFERENCES service,
     idproduit INT4 REFERENCES produit,
     qte DOUBLE PRECISION,
-    etat INT
+    etat INT default 0
 );
 
 CREATE TABLE validate_besoin(
@@ -83,3 +85,30 @@ CREATE TABLE reponse_prestataire(
     idfournisseur INT4 REFERENCES fournisseur,
     proforma VARCHAR
 );
+
+
+CREATE OR REPLACE VIEW v_validation_by_resp AS
+SELECT
+    besoin_service.idbesoin_service,
+    besoin_service.numero,
+    besoin_service.idservice,
+    service.nom AS service_nom,
+    service.idresponsable AS idresponsable_service,
+    personnel.nom AS responsable_nom,
+    personnel.prenom AS responsable_prenom,
+    besoin_service.idproduit,
+    produit.code AS produit_code,
+    produit.nom AS produit_nom,
+    besoin_service.qte,
+    besoin_service.etat
+FROM
+    besoin_service
+JOIN
+    service ON besoin_service.idservice = service.idservice
+JOIN
+    personnel ON service.idresponsable = personnel.id
+JOIN
+    produit ON besoin_service.idproduit = produit.idproduit;
+
+
+-- UPDATE besoin_service SET etat = 0 FROM service WHERE besoin_service.idproduit = 2 AND service.idresponsable = 1 AND service.idservice = 1

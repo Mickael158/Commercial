@@ -11,12 +11,19 @@ namespace Commercial.Controllers
         {
             return View();
         }
+
         [HttpPost("/autorisation")]
-        public IActionResult verification(string matricule, String paswd)
+        public IActionResult verification(String matricule, String paswd)
         {
             Personnel personnel = new Personnel();
             bool perso = personnel.VerificationPersonnelByMatriculeAndPassword(matricule, paswd);
+            Console.WriteLine("aona =" + perso);
+            Console.WriteLine("matricule = " + matricule + " paswd = " + paswd);
             personnel = personnel.SearchPersonnelByMatriculeAndPassword(matricule, paswd);
+            HttpContext.Session.SetInt32("idpersonne", personnel.idPersonnel);
+            int idpersonne = int.Parse(HttpContext.Session.GetInt32("idpersonne").ToString());
+            Console.WriteLine("Ito ilay mamorona azyyy "+idpersonne);
+            Console.WriteLine("tsy azokooo "+personnel.idPersonnel);
             bool persoResp = personnel.VerificationPersonnelResponsableByMatriculeAndPassword(matricule, paswd); // rhf true ito d tkn ampotra le Layout Special
             if(perso == true)
             {
@@ -26,6 +33,7 @@ namespace Commercial.Controllers
             }
             return RedirectToAction("Index");
         }
+
         [HttpPost("/deconnection")]
         public IActionResult deconnection()
         {

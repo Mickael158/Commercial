@@ -8,7 +8,7 @@ namespace Commercial.Models
         private static readonly string PORT = "5432";
         private static readonly string DATABASE_NAME = "societe";
         private static readonly string USERNAME = "postgres";
-        private static readonly string PASSWORD = "12345678";
+        private static readonly string PASSWORD = "postgres";
 
 
         public NpgsqlConnection Connect()

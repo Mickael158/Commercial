@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Validation des besoins par service";
+    var validations = ViewBag.ValidationBesoin as List<ValidationBesoin>;
+}
+
+<form method="post" action="@Url.Action("getProduitToCheck", "Besoin")">
+    <table>
+        <thead>
+            <tr>
+                <th></th> <!-- Colonne pour la case à cocher -->
+                <th>Produit</th>
+                <th>Quantité</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var validation in validations)
+            {
+                <tr>
+                    <td>
+                        <input type="checkbox" name="selectedProducts" value="@validation.produit.idProduit" />
+                    </td>
+                    <input type="hidden" name="numeros[@validation.produit.idProduit]" value="@validation.besoinservice.numero">
+                    <td>@validation.besoinservice.numero - @validation.produit.nom</td>
+                    <td>quantite : @validation.besoinservice.quantite</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <button type="submit">Valider la sélection</button>
+</form>

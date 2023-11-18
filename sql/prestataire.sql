@@ -1,6 +1,6 @@
 CREATE TABLE produit(
     code VARCHAR PRIMARY KEY,
-    nom
+    nom VARCHAR
 );
 
 CREATE TABLE stock(
