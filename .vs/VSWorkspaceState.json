@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Models",
+    "\\sql",
+    "\\Views",
+    "\\Views\\Besoin",
+    "\\Views\\Login",
+    "\\Views\\Shared"
+  ],
+  "SelectedNode": "\\sql\\table.sql",
+  "PreviewInSolutionExplorer": false
+}
