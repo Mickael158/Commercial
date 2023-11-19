@@ -30,17 +30,42 @@ namespace Commercial.Models
             }
         }
 
-        public List<ValidationBesoin> getListBesoinParResp(int id)
+        public List<string> getListNumeroBesoinParResp(int id)
+        {
+            ConnexionBDD connexion = new ConnexionBDD();
+            List<string> list = new List<string>(); 
+            using (NpgsqlConnection connection = connexion.Connect())
+            {
+                string sql = "SELECT DISTINCT numero FROM besoin_service WHERE numero NOT IN (SELECT numero_besoin_service FROM validate_besoin) AND idservice IN ( SELECT idservice FROM service WHERE idresponsable=@id )";
+                Console.WriteLine(sql);
+                using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("id", id);
+                    using (NpgsqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+            return list;
+        }
+
+        public List<ValidationBesoin> getListBesoinParResp(int id, string numero)
         {
             ConnexionBDD connexion = new ConnexionBDD();
             List<ValidationBesoin> listavalider = new List<ValidationBesoin>();
 
             using (NpgsqlConnection connection = connexion.Connect())
             {
-                string sql = "select * from v_validation_by_resp where idresponsable_service = "+id+" and etat = 0";
+                string sql = "select * from v_validation_by_resp where idresponsable_service=@id and etat = 0 and numero=@numero";
                 Console.WriteLine(sql);
                 using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
                 {
+                    command.Parameters.AddWithValue("@id",id);
+                    command.Parameters.AddWithValue("@numero", numero);
                     using (NpgsqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
