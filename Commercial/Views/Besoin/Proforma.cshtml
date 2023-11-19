@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Ajoutez vos styles CSS personnalisés ici */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .total {
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 20px;
+        }
+
+        .bar {
+            border-bottom: 1px solid #dddddd;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .half {
+            display: inline-block;
+            width: 49%;
+            vertical-align: top;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+    </style>
+    <title>Facture Proforma</title>
+</head>
+<body>
+    <h2>Mon Entreprise</h2>
+    <p>Adresse Entreprise</p>
+    <p>CP Ville - Antananarivo</p>
+    <p>Email: email@entreprise.com</p>
+    <p>Téléphone: 123456789</p>
+
+    <div>
+        <div class="half">
+            <p>1- Date d'émission: 01/01/2023</p>
+            <p>Emis par: John Doe</p>
+            <p>Délai de livraison: 15 jours</p>
+            <p>Mode de livraison: Livraison express</p>
+            <p>Modalité de paiement: Paiement à réception</p>
+        </div>
+        <div class="half align-right">
+            <p>2- Destinataire: Destinataire</p>
+            <p>Entreprise: Entreprise Client</p>
+            <p>Nom du client: Nom du Client</p>
+            <p>Adresse: Adresse Client</p>
+            <p>CP Ville: CP Ville - Antananarivo</p>
+        </div>
+    </div>
+
+    <p class="align-right">FACTURE PROFORMA n° XXXXX</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Désignation des produits ou prestations</th>
+                <th>Quantité</th>
+                <th>Unité</th>
+                <th>Prix Unitaire HT</th>
+                <th>TVA applicable</th>
+                <th>TOTAL HT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Produit A</td>
+                <td>2</td>
+                <td>Unité</td>
+                <td>10.5</td>
+                <td>0.2</td>
+                <td>21.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" class="total align-right">TOTAL HT</td>
+                <td>21.00</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="total align-right">TVA</td>
+                <td>4.20</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="total align-right">Frais de port</td>
+                <td>5.00</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="total align-right">TOTAL TTC</td>
+                <td>30.20</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="footer">
+        <p class="align-right">Offre valable jusqu'au 31/01/2023</p>
+        <p class="align-right">Signature</p>
+    </div>
+</body>
+</html>

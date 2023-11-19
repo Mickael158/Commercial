@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Ajoutez vos styles CSS personnalisés ici */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .total {
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 20px;
+        }
+    </style>
+    <title>Bon de Commande</title>
+</head>
+<body>
+    <h2>Nom avec Valeur Juridique</h2>
+    <p>Date de Tirage: 01/01/2023</p>
+    <p>Adresse à: Adresse du Fournisseur</p>
+    <p>Numéro: BC123</p>
+    <p>Délai de Livraison: 15 jours</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Désignation</th>
+                <th>Catégorie</th>
+                <th>Quantité</th>
+                <th>Prix Unitaire HT</th>
+                <th>TOTAL HT</th>
+                <th>TVA</th>
+                <th>Prix TTC</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Produit A</td>
+                <td>Fourniture de Bureau</td>
+                <td>2</td>
+                <td>10.5</td>
+                <td>10</td>
+                <td>0.2</td>
+                <td>12.60</td>
+            </tr>
+            <tr>
+                <td>Produit B</td>
+                <td>Électronique</td>
+                <td>1</td>
+                <td>50.0</td>
+                <td>50.0</td>
+                <td>0.2</td>
+                <td>60.00</td>
+            </tr>
+            <tr>
+                <td>Produit C</td>
+                <td>Vêtements</td>
+                <td>3</td>
+                <td>20.75</td>
+                <td>20.75</td>
+                <td>0.2</td>
+                <td>24.90</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6" class="total">TOTAL</td>
+                <td class="total">97.50</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="footer">
+        <p>Arrêté le présent bon de commande à la somme de Cent vingt-trois euros et quarante-cinq centimes (TTC).</p>
+    </div>
+</body>
+</html>

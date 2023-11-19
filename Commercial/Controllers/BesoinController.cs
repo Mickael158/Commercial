@@ -91,6 +91,17 @@ namespace Commercial.Controllers
             return RedirectToAction("ValidationBesoin");
         }
 
+        public IActionResult BonDeCommande()
+        {
+            return View("BonDeCommande");
+        }
+
+        public IActionResult Proforma()
+        {
+            return View("Proforma");
+        }
+
+
         public IActionResult Privacy()
         {
             return View();

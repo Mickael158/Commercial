@@ -16,8 +16,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\miali\Documents\3eme_annee\S5\Tovo\Commercial\Commercial
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/miali/Documents/3eme_annee/S5/Tovo/Commercial/Commercial/Views/Besoin/BonDeCommande.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVzb2luXEJvbkRlQ29tbWFuZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/miali/Documents/3eme_annee/S5/Tovo/Commercial/Commercial/Views/Besoin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVzb2luXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/miali/Documents/3eme_annee/S5/Tovo/Commercial/Commercial/Views/Besoin/Proforma.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVzb2luXFByb2Zvcm1hLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/miali/Documents/3eme_annee/S5/Tovo/Commercial/Commercial/Views/Besoin/ValidationBesoin.cshtml]
