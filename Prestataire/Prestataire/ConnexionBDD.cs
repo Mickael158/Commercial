@@ -2,7 +2,7 @@
 
 namespace Commercial.Models
 {
-    public class Connexion
+    public class ConnexionBDD
     {
         private static readonly string HOST = "localhost";
         private static readonly string PORT = "5432";

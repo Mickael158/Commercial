@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "KClna2/FdihECVU2vZa1w6awZhPFCiSBP9FM/8+OxRbvStF1EPao0I5QJDtm+8E8hh4JCgMZo8l31SyZWahyxA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\miali\\Documents\\3eme_annee\\S5\\Tovo\\Commercial\\Commercial\\Commercial.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\miali\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\miali\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
+    "C:\\Users\\miali\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

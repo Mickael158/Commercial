@@ -24,7 +24,7 @@ namespace Prestataire
 
         public static Proforma GetProformaProduit(string idprestataire, string nom)
         {
-            Connexion connexion = new Connexion();
+            ConnexionBDD connexion = new ConnexionBDD();
             using (NpgsqlConnection connection = connexion.Connect())
             {
                 string query = "SELECT * FROM v_etat_stock WHERE codeproduit=@code AND idfournisseur=@idprestataire";
@@ -62,7 +62,7 @@ namespace Prestataire
 
         public static string getCode(string Nom)
         {
-            Connexion connexion = new Connexion();
+            ConnexionBDD connexion = new ConnexionBDD();
             using (NpgsqlConnection connection = connexion.Connect())
             {
                 string sql = "select code from produit WHERE nom=@nom";

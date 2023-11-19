@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ITU\\S5\\TOVO\\Prestataire\\Prestataire\\Prestataire.csproj": {}
+    "D:\\ITU\\S5\\TOVO\\Commercial\\Prestataire\\Prestataire\\Prestataire.csproj": {}
   },
   "projects": {
-    "D:\\ITU\\S5\\TOVO\\Prestataire\\Prestataire\\Prestataire.csproj": {
+    "D:\\ITU\\S5\\TOVO\\Commercial\\Prestataire\\Prestataire\\Prestataire.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ITU\\S5\\TOVO\\Prestataire\\Prestataire\\Prestataire.csproj",
+        "projectUniqueName": "D:\\ITU\\S5\\TOVO\\Commercial\\Prestataire\\Prestataire\\Prestataire.csproj",
         "projectName": "Prestataire",
-        "projectPath": "D:\\ITU\\S5\\TOVO\\Prestataire\\Prestataire\\Prestataire.csproj",
+        "projectPath": "D:\\ITU\\S5\\TOVO\\Commercial\\Prestataire\\Prestataire\\Prestataire.csproj",
         "packagesPath": "C:\\Users\\elyse\\.nuget\\packages\\",
-        "outputPath": "D:\\ITU\\S5\\TOVO\\Prestataire\\Prestataire\\obj\\",
+        "outputPath": "D:\\ITU\\S5\\TOVO\\Commercial\\Prestataire\\Prestataire\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\elyse\\AppData\\Roaming\\NuGet\\NuGet.Config",
