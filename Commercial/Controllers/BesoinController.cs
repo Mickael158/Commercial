@@ -48,14 +48,23 @@ namespace Commercial.Controllers
         {
             ValidationBesoin validation = new ValidationBesoin();
             int idpersonne = int.Parse(HttpContext.Session.GetInt32("idpersonne").ToString());
-            Console.WriteLine("idpersonne = " + idpersonne);
-            List<ValidationBesoin> validations = validation.getListBesoinParResp(idpersonne);
-            ViewBag.ValidationBesoin = validations;
+            List<string> numeros = validation.getListNumeroBesoinParResp(idpersonne);
+            ViewBag.ValidationBesoin = numeros;
             return View("ValidationBesoin");
         }
 
+        [HttpGet("/ValidationBesoinByNumber/{numero}")]
+        public IActionResult ValidationBesoinByNumber(string numero)
+        {
+            ValidationBesoin validation = new ValidationBesoin();
+            int idpersonne = int.Parse(HttpContext.Session.GetInt32("idpersonne").ToString());
+            List<ValidationBesoin> validations = validation.getListBesoinParResp(idpersonne, numero);
+            ViewBag.ValidationBesoin = validations;
+            return View("ValidationBesoinByNumber");
+        }
+
         [HttpPost("/getProduitToCheck")]
-        public IActionResult getProduitToCheck(string[] selectedProducts, Dictionary<int, string> numeros)
+        public IActionResult getProduitToCheck(string[] selectedProducts, string num, Dictionary<int, string> numeros)
         {
             BesoinService besoinService = new BesoinService();
             int idpersonne = HttpContext.Session.GetInt32("idpersonne") ?? 0; // Utilisation de ?? pour obtenir une valeur par défaut de 0 si la clé n'existe pas
@@ -72,22 +81,19 @@ namespace Commercial.Controllers
                 {
                     if (numeros.ContainsKey(productIdInt))
                     {
-                        string numero = numeros[productIdInt];
-                        Console.WriteLine($"Produit sélectionné : {productIdInt}, Numéro : {numero}");
                         try
                         {
-                            validation.InsererValidateBesoin(dateAujourdhui, numero, idpersonne);
                             int idproduit = int.Parse(productId);
-                            besoinService.UpdateEtatProduit(productIdInt, idpersonne, numero);
+                            besoinService.UpdateEtatProduit(productIdInt, idpersonne, num);
                         }
                         catch (Exception ex)
                         {
-                            // Gérez l'exception selon vos besoins
                             Console.WriteLine($"Une erreur s'est produite : {ex.Message}");
                         }
                     }
                 }
             }
+            validation.InsererValidateBesoin(dateAujourdhui, num, idpersonne);
             return RedirectToAction("ValidationBesoin");
         }
 

@@ -43,13 +43,13 @@ namespace Commercial.Models
         }
 
 
-        public void UpdateEtatProduit(int idproduit,int idresponsable,String numero)
+        public void UpdateEtatProduit(int idproduit,int idresponsable,string numero)
         {
             ConnexionBDD connexion = new ConnexionBDD();
 
             using (NpgsqlConnection connection = connexion.Connect())
             {
-                string sql = "UPDATE besoin_service SET etat = 11 FROM service WHERE besoin_service.idproduit = @idproduit AND service.idresponsable = @idresponsable AND besoin_service.numero = @numero AND service.idservice = besoin_service.idservice;";
+                string sql = "UPDATE besoin_service SET etat = 11 FROM service WHERE besoin_service.idproduit = @idproduit AND service.idresponsable = @idresponsable AND besoin_service.numero = @numero AND service.idservice = besoin_service.idservice";
                 using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
                 {
                     command.Parameters.AddWithValue("@idproduit", idproduit);

@@ -16,6 +16,7 @@ CREATE TABLE personnel(
     prenom VARCHAR,
     pass VARCHAR
 );
+
 INSERT INTO personnel (matricule, nom, prenom, pass) VALUES
     ('EMP001', 'Dupont', 'Jean', 'AZERTY'),
     ('EMP002', 'Martin', 'Sophie', 'AZERTY'),
@@ -42,6 +43,7 @@ CREATE TABLE service(
     nom VARCHAR,
     idresponsable INT4 REFERENCES personnel
 );
+
 INSERT INTO service (idsociete, nom, idresponsable) VALUES
     (1, 'Service A', 1),
     (1, 'Service B', 2),
@@ -53,14 +55,12 @@ INSERT INTO service (idsociete, nom, idresponsable) VALUES
 CREATE TABLE fournisseur(
     id SERIAL PRIMARY KEY,
     nom VARCHAR,
-    localisation VARCHAR
+    code VARCHAR
 );
-INSERT INTO fournisseur (nom, localisation) VALUES
-    ('Fournisseur A', 'Paris'),
-    ('Fournisseur B', 'New York'),
-    ('Fournisseur C', 'Berlin'),
-    ('Fournisseur D', 'San Francisco'),
-    ('Fournisseur E', 'London');
+INSERT INTO fournisseur (nom, code) VALUES
+    ('Fournisseur A', 'FRNS1'),
+    ('Fournisseur B', 'FRNS2'),
+    ('Fournisseur C', 'FRNS3');
 
 
 CREATE TABLE produit(
@@ -92,6 +92,20 @@ CREATE TABLE validate_besoin(
     numero_besoin_service VARCHAR,
     idpersonnel INT REFERENCES personnel
 );
+
+/*
+SELECT DISTINCT numero
+FROM besoin_service
+WHERE numero NOT IN (
+    SELECT numero_besoin_service
+    FROM validate_besoin
+)
+AND idservice IN (
+    SELECT idservice
+    FROM service
+    WHERE idresponsable = <idresponsable>
+);
+*/
 
 
 CREATE TABLE reponse_prestataire(

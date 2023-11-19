@@ -163,19 +163,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\miali\\.nuget\\packages\\": {}
+    "C:\\Users\\elyse\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\miali\\Documents\\3eme_annee\\S5\\Tovo\\Commercial\\Commercial\\Commercial.csproj",
+      "projectUniqueName": "D:\\ITU\\S5\\TOVO\\Commercial\\Commercial\\Commercial.csproj",
       "projectName": "Commercial",
-      "projectPath": "C:\\Users\\miali\\Documents\\3eme_annee\\S5\\Tovo\\Commercial\\Commercial\\Commercial.csproj",
-      "packagesPath": "C:\\Users\\miali\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\miali\\Documents\\3eme_annee\\S5\\Tovo\\Commercial\\Commercial\\obj\\",
+      "projectPath": "D:\\ITU\\S5\\TOVO\\Commercial\\Commercial\\Commercial.csproj",
+      "packagesPath": "C:\\Users\\elyse\\.nuget\\packages\\",
+      "outputPath": "D:\\ITU\\S5\\TOVO\\Commercial\\Commercial\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\miali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\elyse\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -225,7 +225,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
