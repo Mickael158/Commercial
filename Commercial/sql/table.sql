@@ -53,14 +53,13 @@ INSERT INTO service (idsociete, nom, idresponsable) VALUES
 CREATE TABLE fournisseur(
     id SERIAL PRIMARY KEY,
     nom VARCHAR,
-    localisation VARCHAR
+    code VARCHAR UNIQUE
 );
-INSERT INTO fournisseur (nom, localisation) VALUES
-    ('Fournisseur A', 'Paris'),
-    ('Fournisseur B', 'New York'),
-    ('Fournisseur C', 'Berlin'),
-    ('Fournisseur D', 'San Francisco'),
-    ('Fournisseur E', 'London');
+
+INSERT INTO fournisseur (nom, code) VALUES
+    ('Fournisseur A', 'FRNS1'),
+    ('Fournisseur B', 'FRNS2'),
+    ('Fournisseur C', 'FRNS3');
 
 
 CREATE TABLE produit(
