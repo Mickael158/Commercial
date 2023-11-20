@@ -9,7 +9,7 @@ namespace Commercial.Models
         public string produit { get; set; }
         public double qte { get; set; }
 
-        public static async Task sendDemandeAsync(List<BesoinDemande> list, string codefournisseur)
+        public async Task sendDemandeAsync(List<BesoinDemande> list, string codefournisseur)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -20,6 +20,7 @@ namespace Commercial.Models
                 {
                     string jsonResponse = await response.Content.ReadAsStringAsync();
                     JsonArray result = JsonConvert.DeserializeObject<JsonArray>(jsonResponse);
+                   
                 }
             }
         }
